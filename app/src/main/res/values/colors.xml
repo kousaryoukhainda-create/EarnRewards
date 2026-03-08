@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="earn_gold">#F7931A</color>
+    <color name="earn_dark">#1A1A2E</color>
+    <color name="earn_light">#16213E</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <!-- Bitcoin theme colors -->
+    <color name="bitcoin_dark">#0D1B2A</color>
+    <color name="bitcoin_orange">#F7931A</color>
+    <color name="bitcoin_light">#1B4D89</color>
+</resources>

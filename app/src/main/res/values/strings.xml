@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Earn Rewards</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="rewarded_ad_unit_id">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="bitcoin_price">Bitcoin Price</string>
+    <string name="current_price">Current Price:</string>
+    <string name="refresh">Refresh</string>
+    <string name="watch_rewarded_ad">Watch Ad to Unlock Premium Features</string>
+    <string name="show_interstitial">Show Interstitial Ad</string>
+    <string name="loading">Loading…</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="premium_unlocked">Premium Features Unlocked!</string>
+    <string name="ad_not_ready">Ad is not ready yet</string>
+    <string name="ad_failed">Ad failed to load</string>
+    <string name="ad_dismissed">Ad dismissed</string>
+    <string name="reward_earned">You earned a reward!</string>
+</resources>

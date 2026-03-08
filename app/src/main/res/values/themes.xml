@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.EarnRewards" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/earn_gold</item>
+        <item name="colorPrimaryVariant">@color/earn_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/earn_gold</item>
+        <item name="colorSecondaryVariant">@color/earn_gold</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/earn_dark</item>
+    </style>
+
+    <!-- Alias for backward compatibility -->
+    <style name="Theme.BitcoinApp" parent="Theme.EarnRewards" />
+</resources>
