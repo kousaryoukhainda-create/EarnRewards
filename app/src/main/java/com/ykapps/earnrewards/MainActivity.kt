@@ -13,7 +13,6 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.FullScreenContentCallback
-import com.google.android.gms.ads.InitializationStatus
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
@@ -59,18 +58,15 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             // Initialize Mobile Ads SDK with proper status handling
             MobileAds.initialize(this@MainActivity) { initializationStatus ->
-                when (initializationStatus.status) {
-                    InitializationStatus.Status.SUCCESS -> {
-                        Log.d(TAG, "AdMob initialized successfully")
-                        // Setup ads after successful initialization
-                        setupBannerAd()
-                        loadInterstitialAd()
-                        loadRewardedAd()
-                    }
-                    InitializationStatus.Status.FAILED -> {
-                        Log.e(TAG, "AdMob initialization failed: ${initializationStatus.message}")
-                        statusTextView.text = "Ad initialization failed"
-                    }
+                if (initializationStatus.status == InitializationStatus.STATUS_SUCCESS) {
+                    Log.d(TAG, "AdMob initialized successfully")
+                    // Setup ads after successful initialization
+                    setupBannerAd()
+                    loadInterstitialAd()
+                    loadRewardedAd()
+                } else {
+                    Log.e(TAG, "AdMob initialization failed: ${initializationStatus.message}")
+                    statusTextView.text = "Ad initialization failed"
                 }
             }
 

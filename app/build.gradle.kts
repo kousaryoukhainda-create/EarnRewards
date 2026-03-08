@@ -56,7 +56,6 @@ android {
         jvmTarget = "17"
         // Optimize for speed
         freeCompilerArgs += listOf(
-            "-Xskip-runtime-version-check",
             "-Xno-call-assertions",
             "-Xno-param-assertions"
         )
