@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Mobile Ads SDK
         MobileAds.initialize(this) { initializationStatus ->
-            Log.d(TAG, "AdMob initialized: ${initializationStatus.status}")
+            Log.d(TAG, "AdMob initialized successfully")
         }
 
         // Initialize views
