@@ -195,15 +195,11 @@ class MainActivity : AppCompatActivity() {
                     statusTextView.text = getString(R.string.ad_failed)
                     loadRewardedAd()
                 }
-
-                override fun onUserEarnedReward(rewardItem: RewardItem) {
-                    Log.d(TAG, "User earned reward: ${rewardItem.amount} ${rewardItem.type}")
-                    onRewardEarned()
-                }
             }
 
             rewardedAd?.show(this) { rewardItem ->
                 Log.d(TAG, "Reward earned: ${rewardItem.amount} ${rewardItem.type}")
+                onRewardEarned()
             }
             rewardedAd = null
         } else {
