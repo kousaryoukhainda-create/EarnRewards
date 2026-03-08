@@ -55,17 +55,6 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize views
         initViews()
-
-        // Setup ads
-        setupBannerAd()
-        loadInterstitialAd()
-        loadRewardedAd()
-
-        // Setup click listeners
-        setupClickListeners()
-
-        // Load initial Bitcoin price
-        loadBitcoinPrice()
     }
 
     private fun initViews() {
