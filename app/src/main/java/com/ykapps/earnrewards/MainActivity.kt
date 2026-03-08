@@ -56,18 +56,13 @@ class MainActivity : AppCompatActivity() {
 
         // Lifecycle-aware ad initialization and data loading
         lifecycleScope.launch {
-            // Initialize Mobile Ads SDK with proper status handling
-            MobileAds.initialize(this@MainActivity) { initializationStatus ->
-                if (initializationStatus.status == InitializationStatus.STATUS_SUCCESS) {
-                    Log.d(TAG, "AdMob initialized successfully")
-                    // Setup ads after successful initialization
-                    setupBannerAd()
-                    loadInterstitialAd()
-                    loadRewardedAd()
-                } else {
-                    Log.e(TAG, "AdMob initialization failed: ${initializationStatus.message}")
-                    statusTextView.text = "Ad initialization failed"
-                }
+            // Initialize Mobile Ads SDK
+            MobileAds.initialize(this@MainActivity) {
+                Log.d(TAG, "AdMob initialized successfully")
+                // Setup ads after successful initialization
+                setupBannerAd()
+                loadInterstitialAd()
+                loadRewardedAd()
             }
 
             // Load initial Bitcoin price
